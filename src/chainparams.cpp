@@ -3,6 +3,7 @@
 // Copyright (c) 2014-2015 The Dash developers
 // Copyright (c) 2015-2017 The PIVX developers
 // Copyright (c) 2017-2018 The XDNA Core developers
+// Copyright (c) 2018 The HashTalt Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -109,28 +110,28 @@ public:
         vAlertPubKey = ParseHex("04A2B684CBABE97BA08A35EA388B06A6B03E13DFBA974466880AF4CAE1C5B606A751BF7C5CBDE5AB90722CF5B1EC1AADA6D24D607870B6D6B5D684082655404C8D");
         vXDNADevKey = ParseHex("022168bed33339fdc945077c9056a42ceacda589b9d2c7733a72e75e7ee29ef586"); // DevPubKey for fees
         vXDNAFundKey = ParseHex("03b7a94485bb264d12fbffdddff462060e51a27e55f256b62648c25c1fb8bb565c"); // FundPubKey for fees
-        nDevFee = 1; // DevFee %
-        nFundFee = 2; //FundFee %
-        nDefaultPort = 1945;
+        nDevFee = 2; // DevFee %
+        nFundFee = 3; //FundFee %
+        nDefaultPort = 16699;
         bnProofOfWorkLimit = ~uint256(0) >> 20;
         bnStartWork = ~uint256(0) >> 24;
 
         subsidySwitchPoints = {
-            {0         ,   4 * COIN},
+            {0         ,   5 * COIN},
             {2   * 1e12,   5 * COIN},
-            {3   * 1e12,   7 * COIN},
-            {5   * 1e12,   9 * COIN},
-            {8   * 1e12,  11 * COIN},
-            {13  * 1e12,  15 * COIN},
-            {21  * 1e12,  20 * COIN},
-            {34  * 1e12,  27 * COIN},
-            {55  * 1e12,  39 * COIN},
-            {89  * 1e12,  57 * COIN},
-            {144 * 1e12,  85 * COIN},
-            {233 * 1e12, 131 * COIN},
-            {377 * 1e12, 204 * COIN},
-            {610 * 1e12, 321 * COIN},
-            {987 * 1e12, 511 * COIN},
+            {3   * 1e12,   5 * COIN},
+            {5   * 1e12,   5 * COIN},
+            {8   * 1e12,  5 * COIN},
+            {13  * 1e12,  10 * COIN},
+            {21  * 1e12,  10 * COIN},
+            {34  * 1e12,  10 * COIN},
+            {55  * 1e12,  10 * COIN},
+            {89  * 1e12,  10 * COIN},
+            {144 * 1e12,  20 * COIN},
+            {233 * 1e12, 20 * COIN},
+            {377 * 1e12, 20 * COIN},
+            {610 * 1e12, 20 * COIN},
+            {987 * 1e12, 20 * COIN},
         };
         assert(subsidySwitchPoints.size());
 
@@ -140,15 +141,15 @@ public:
         nToCheckBlockUpgradeMajority = 1000;
         nMinerThreads = 0;
         nTargetSpacing = 1 * 60;  // XDNA: 1 minute
-        nAntiInstamineTime = 720; // 720 blocks with 1 reward for instamine prevention
+        nAntiInstamineTime = 360; // 720 blocks with 1 reward for instamine prevention
         nMaturity = 60;
         nMasternodeCountDrift = 3;
-        nMaxMoneyOut = 367452000 * COIN;
+        nMaxMoneyOut = 100000000 * COIN;
 
-        nStartMasternodePaymentsBlock = 7001;
+        nStartMasternodePaymentsBlock = 40001;
 
         /** Height or Time Based Activations **/
-        nLastPOWBlock = 1440000;
+        nLastPOWBlock = 40000;
         nModifierUpdateBlock = std::numeric_limits<decltype(nModifierUpdateBlock)>::max();
 
         /**
