@@ -117,21 +117,21 @@ public:
         bnStartWork = ~uint256(0) >> 24;
 
         subsidySwitchPoints = {
-            {0         ,   5 * COIN},
-            {2   * 1e12,   5 * COIN},
-            {3   * 1e12,   5 * COIN},
-            {5   * 1e12,   5 * COIN},
-            {8   * 1e12,  5 * COIN},
-            {13  * 1e12,  10 * COIN},
-            {21  * 1e12,  10 * COIN},
-            {34  * 1e12,  10 * COIN},
-            {55  * 1e12,  10 * COIN},
-            {89  * 1e12,  10 * COIN},
-            {144 * 1e12,  20 * COIN},
-            {233 * 1e12, 20 * COIN},
-            {377 * 1e12, 20 * COIN},
-            {610 * 1e12, 20 * COIN},
-            {987 * 1e12, 20 * COIN},
+            {0         ,   3 * COIN},
+            {2   * 1e12,   3 * COIN},
+            {3   * 1e12,   3 * COIN},
+            {5   * 1e12,   3 * COIN},
+            {8   * 1e12,  3 * COIN},
+            {13  * 1e12,  5 * COIN},
+            {21  * 1e12,  5 * COIN},
+            {34  * 1e12,  5 * COIN},
+            {55  * 1e12,  5 * COIN},
+            {89  * 1e12,  5 * COIN},
+            {144 * 1e12,  5 * COIN},
+            {233 * 1e12, 10 * COIN},
+            {377 * 1e12, 10 * COIN},
+            {610 * 1e12, 10 * COIN},
+            {987 * 1e12, 10 * COIN},
         };
         assert(subsidySwitchPoints.size());
 
@@ -144,7 +144,7 @@ public:
         nAntiInstamineTime = 360; // 720 blocks with 1 reward for instamine prevention
         nMaturity = 60;
         nMasternodeCountDrift = 3;
-        nMaxMoneyOut = 100000000 * COIN;
+        nMaxMoneyOut = 10000000 * COIN;
 
         nStartMasternodePaymentsBlock = 40001;
 
